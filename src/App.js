@@ -37,7 +37,7 @@ const App = () => {
         <Navbar toggle={toggle} />
       </div> */}
 
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Routes>
           
           <Route path="/experts" element={<ExpertsPage />} />
