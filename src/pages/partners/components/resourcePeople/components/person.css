@@ -1,0 +1,40 @@
+.person-name-resource{
+    font-family: SF-bold;
+    font-size: 16px;
+    line-height:1.3rem;
+    margin-bottom: 0px;  
+}
+
+.personcard{
+
+    background: rgb(0,65,41);
+    background: linear-gradient(54deg, rgba(0,65,41,1) 0%, rgba(0,83,75,1) 100%); 
+    padding: 0.8rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top:0rem;
+    margin-bottom:2rem;
+    min-height: 21rem;
+
+    /* border-radius: 5px; */
+    border-radius: 15px;
+    
+}
+
+.person-image{
+    border-radius: 5000px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(5, 101, 26);
+}
+
+.person-details{
+    margin-top: 1.5rem;
+}
+
+.text-normal-resource{
+    font-family: SF-regular;
+    font-size: 12px;
+    font-weight: 200;
+  
+}
