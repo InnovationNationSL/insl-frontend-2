@@ -1,6 +1,9 @@
 
 import YouTube, { YouTubeProps } from "react-youtube";
 import React, { useState } from 'react';
+import Card1 from "./components/card/Card1";
+import { Card, Col, Row } from "react-bootstrap";
+import Records from "../../../../json/RTINSL_prev.json";
 
 function Roadtoinsl() {
   const onPlayerReady: YouTubeProps["onReady"] = (event) => {
@@ -64,12 +67,10 @@ function Roadtoinsl() {
             <button type="button" class={"btn btn-outline-light" + (roadToINSLday === 3 ? " active" : "")} onClick={() => setRoadToINSLday(3)}>
               2022 - Day 03
             </button>
-            
-            <a href="https://in.ieee.lk/blog.html" target="_blank" style={{textDecoration:"none", color:"white"}}> 
-            <button type="button" class={"btn btn-outline-light"}>
+            <button  type="button" class={"btn btn-outline-light" + (roadToINSLday === 4 ? " active" : "")} onClick={() => setRoadToINSLday(4)}>
               Previous Content
             </button>
-            </a>
+            
           </div>
         </div>
 
@@ -218,6 +219,29 @@ function Roadtoinsl() {
               onReady={onPlayerReady}
             />
           </div>
+        </div>
+        : null} 
+
+
+
+      {roadToINSLday===4 ? 
+        <div >
+          <h1 className="title">Previous INSL Content</h1>
+          <div>
+            <Row>
+              {Records.map((record, k) => {
+              return(
+                <Col key={k} xs={12} md={6} lg={6}>
+                  <Card className={"boot-card"}>
+                    <Card1 title={record.title} speakers={record.speakers} year={record.year} link={record.link} image={record.image} />
+                  </Card>
+                </Col>
+              )})}
+            </Row>
+            
+
+          </div>
+
         </div>
         : null} 
 
