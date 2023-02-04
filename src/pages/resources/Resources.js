@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Roadtoinsl from "./components/roadtoinsl/roadtoinsl";
 import HustleStories from "./components/hustlestories/hustlestories";
+import Workshops from "./components/workshops/workshops";
+import Footer from "../../components/Footer/Footer";
 
 function Resources() {
   const [resourceType, setResourceType] = useState(1);
@@ -51,11 +53,11 @@ function Resources() {
 
       {resourceType===3 ? 
         <div className="row">
-          <HustleStories/>
+          <Workshops/>
         </div>
         : null}
 
-    
+    <Footer />
     </div>
   );
 }

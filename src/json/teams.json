@@ -1,9 +1,11 @@
-{ "chairman":[{
-  "name": "Chanaka Wickramasinghe",
-  "title": "CHAIRPERSON",
-  "linkedin": "https://www.linkedin.com/in/chanakawick/",
-  "facebook": "https://www.facebook.com/cwickramasinghe",
-  "image": "/Chanaka.jpg"
+{ 
+"chairman":[
+    {
+    "name": "Chanaka Wickramasinghe",
+    "title": "CHAIRPERSON",
+    "linkedin": "https://www.linkedin.com/in/chanakawick/",
+    "facebook": "https://www.facebook.com/cwickramasinghe",
+    "image": "/Chanaka.jpg"
     }
 ],
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card1 from "./components/card/Card1";
-import Records from "../../../../json/workshops.json";
+import RecordsMain from "../../../../json/workshops.json";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import "./workshops.css";
 
@@ -13,7 +13,7 @@ function Workshops(){
                 <div className="row">
                     <div className={"col my-auto"}>
                         <div className={"col-md-10 mx-auto my-auto"}>
-                        <h1 className="title">Hustle Stories</h1>
+                        <h1 className="title">Workshops</h1>
                         <p className="text-normal">
                             Hustle story is the key-starting point of the young 
                             entrepreneurs which mainly focus on motivating the 
@@ -42,24 +42,32 @@ function Workshops(){
 
             <div className="col-12 my-auto">
                 <div className="d-flex mx-auto row col">
-                    <div className="col-12 col-md-9 d-flex mx-auto my-auto flex-sm-row flex-column justify-content-center">
-                        <Row>
-                            {Records.map((record, k) => {
-
-                            // setBreaker(setBreaker+1);
+                    <div className="col-12 col-md-9 mx-auto my-auto flex-sm-row flex-column justify-content-center">
+                        
+                        {RecordsMain.map((recordM, i) => {
                             return(
-                                
-                                <Col key={k} xs={12} md={6} lg={6}>
-                                    <a href={record.link} target="_blank" style={{textDecoration: 'none'}}>
-                                    <Card className={"boot-card"}>
-                                        <Card1 title={record.title} speakers={record.speakers} year={record.year} link={record.link} image={record.image} />
-                                    </Card>
-                                    </a>
-                                </Col>
-                                
+                            <div key={i} className="workshop-section">
+                                <div className="colorWhite">
+                                    <h2 className="title">- {recordM.title}</h2>
+                                    <p className="text-normal">{recordM.desc}</p>
+                                </div>
+                            
+                                <Row>
+                                    {recordM.content.map((record, k) => {
+                                    return(
+                                        
+                                        <Col key={k} xs={12} md={6} lg={6}>
+                                            <a href={record.link} target="_blank" style={{textDecoration: 'none'}}>
+                                            <Card className={"boot-card"}>
+                                                <Card1 title={record.title} speakers={record.speakers} year={record.year} link={record.link} image={record.image} />
+                                            </Card>
+                                            </a>
+                                        </Col>  
+                                    )})}
+                                </Row>
+                            </div>
                             )
-                            })}
-                        </Row>
+                        })}
 
                         
                     </div>
